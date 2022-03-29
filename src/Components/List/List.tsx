@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext } from "react";
 import { BudgetContext } from "../../Context/BudgetContext";
 import ListEntry from "./Entry/ListEntry";
 import Stack from "@mui/material/Stack";
