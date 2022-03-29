@@ -1,0 +1,17 @@
+.StatusProfit {
+  color: #a0d911;
+}
+
+.StatusLoss {
+  color: #f5222d;
+}
+
+.StatusBalance {
+  color: orange;
+}
+
+.BlueBorder{
+  border-style: solid;
+  border-width: 5px;
+  border-color: #2f54eb;
+}

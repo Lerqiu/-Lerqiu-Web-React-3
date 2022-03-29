@@ -1,26 +1,45 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import Bar from "./Components/MainBar/Bar";
+import "./App.css";
+import BudgetContextProvider from "./Context/BudgetContext";
+import BuilderContextProvider from "./Context/BuilderContext";
+import List from "./Components/List/List";
+import Status from "./Components/Status/Status";
 
-function App() {
+import Stack from "@mui/material/Stack";
+import Container from "@mui/material/Container";
+
+import Header from "./Header";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Main from "./Routing/Main";
+import Loss from "./Routing/Loss";
+import Profit from "./Routing/Profit";
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BudgetContextProvider>
+      {/*
+          <BuilderContextProvider>
+            <Bar />
+          </BuilderContextProvider>
+          <Status />
+          <List />
+        </Stack>
+      </Container> */}
+      <BrowserRouter>
+        <Header />
+        <Container maxWidth="lg">
+          <Stack spacing={2}>
+            <Routes>
+              <Route path="/" element={<Main />} />
+              <Route path="/loss" element={<Loss />} />
+              <Route path="/profit" element={<Profit />} />
+            </Routes>
+          </Stack>
+        </Container>
+      </BrowserRouter>
+    </BudgetContextProvider>
   );
-}
+};
 
 export default App;

@@ -1,0 +1,34 @@
+.ListEntryButton {
+  background-color: orange;
+  border-radius: 50%;
+  display: flexbox;
+  aspect-ratio: 1/1;
+  margin-left: 3%;
+  margin-right: 3%;
+}
+
+.ListEntryButton:hover {
+  background-color: black;
+  color: orange;
+  display: flexbox;
+  aspect-ratio: 1/1;
+  margin-left: 3%;
+  margin-right: 3%;
+}
+
+.ListEntryFragment {
+  padding-left: 10%;
+  padding-right: 10%;
+  min-width:fit-content;
+}
+
+.ListEntryFragmentDescription{
+  width: 50%;
+}
+
+.ListEntryFragmentValue{
+  width: 10%;
+}
+.ListEntryFragmentType{
+  width: 10%;
+}
